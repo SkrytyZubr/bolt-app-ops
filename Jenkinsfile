@@ -20,7 +20,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
-                    docker.image("${env.DOCKER_IMAGE}:latest").run("-p 4000:8080")
+                    docker.image("${env.DOCKER_IMAGE}:latest").run("-p 4000:4000")
                 }
             }
         }
